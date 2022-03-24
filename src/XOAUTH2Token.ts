@@ -52,13 +52,14 @@ export function xoath2_token_contents_decode(raw_token: string): { [key: string]
         segment = segment.trim();
 
         // Splits the segment at '='.
-        const splitted_segment: string[] = segment.split('=');
-        if (splitted_segment.length !== 2) {
+        const index: number = segment.indexOf('=');
+        if (index === -1) {
             throw new Error('One of the XOATH2 token segments is invalid.');
         }
 
-        // Gets the key and value of the segment.
-        const [key, value] = splitted_segment;
+        // Gets the key and value.
+        const key = segment.substring(0, index);
+        const value = segment.substring(index);
 
         // Inserts the key, value pair in the object.
         token_data[key] = value;

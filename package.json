@@ -1,6 +1,6 @@
 {
   "name": "lxoauth2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "XOAUTH2 Library for NodeJS with simple Bearer",
   "main": "dist/main.js",
   "devDependencies": {
