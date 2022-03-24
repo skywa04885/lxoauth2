@@ -53,13 +53,13 @@ export function xoath2_token_contents_decode(raw_token: string): { [key: string]
 
         // Splits the segment at '='.
         const index: number = segment.indexOf('=');
-        if (index === -1) {
+        if (index === -1 || index) {
             throw new Error('One of the XOATH2 token segments is invalid.');
         }
 
         // Gets the key and value.
         const key = segment.substring(0, index);
-        const value = segment.substring(index);
+        const value = segment.substring(index + 1);
 
         // Inserts the key, value pair in the object.
         token_data[key] = value;
