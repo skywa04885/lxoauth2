@@ -1,0 +1,26 @@
+{
+  "name": "lxoath2",
+  "version": "1.0.0",
+  "description": "XOAUTH2 Library for NodeJS with simple Bearer",
+  "main": "dist/main.js",
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skywa04885/lxoauth.git"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/skywa04885/lxoauth/issues"
+  },
+  "homepage": "https://github.com/skywa04885/lxoauth#readme"
+}
