@@ -53,7 +53,7 @@ export function xoath2_token_contents_decode(raw_token: string): { [key: string]
 
         // Splits the segment at '='.
         const index: number = segment.indexOf('=');
-        if (index === -1 || index) {
+        if (index === -1) {
             throw new Error('One of the XOATH2 token segments is invalid.');
         }
 
